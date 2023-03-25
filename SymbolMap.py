@@ -1,45 +1,42 @@
-import sys
 import sqlite3
-import openpyxl
+import sys
 import os
+import copy
+import openpyxl
 
-
-class TradeBook():
+class SymbolMap:
     def __init__(self):
-        self.trades = []
-        self.cursor = None
+        self.symbols = []
         return
 
-    def readtrades(self, path, filename):
-        # reads trades from wbk and stores it in local memory (as a list of tuples)
+    def readmap(self,path, filename, wks_name):
         try:
             wb = openpyxl.load_workbook(os.path.join(path, filename))
         except:
             return False
-
-        ws = wb['TradeBook']
-        for row in ws.iter_rows(min_row=2, max_col=5, max_row=100, values_only=True):
-            self.trades.append(tuple(row))
+        ws = wb[wks_name]
+        for row in ws.iter_rows(min_row=2, max_col=3, max_row=50, values_only=True):
+            self.symbols.append(tuple(row))
         return True
 
-    def write_db(self, db_path, db_filename):
+
+    def writemap(self,db_path, db_filename):
         # takes a list of tuples, writes into db
         try:
             connexion = sqlite3.connect(os.path.join(db_path, db_filename))
             self.cursor = connexion.cursor()
-            if len(self.trades) == 0:
-                sys.stderr.write('CAUTION!:\nNo prior trades loaded')
+            if len(self.symbols) == 0:
+                sys.stderr.write('CAUTION!:\nNo symbol map loaded')
                 raise ValueError
 
-            trade_fields = [('TradeDate', 'text'), ('Ticker', 'text'),('Action', 'text'), ('Qty', 'integer'),
-                            ('Price', 'real')]
-            self.__table_exists('TradeBook', trade_fields, connexion)
+            symbolmap_fields = [('Ticker', 'text'), ('NSE', 'text'), ('BSE', 'text')]
+            self.__table_exists('SymbolMap', symbolmap_fields, connexion)
 
-            for i in range(len(self.trades)):
+            for i in range(len(self.symbols)):
                 self.cursor.execute(
-                    '''INSERT INTO TradeBook ('TradeDate','Ticker','Action','Qty','Price') 
-                    VALUES (?,?,?,?,?)''',
-                    self.trades[i])
+                    '''INSERT INTO SymbolMap ('Ticker','NSE','BSE') 
+                    VALUES (?,?,?)''',
+                    self.symbols[i])
             connexion.commit()
 
         except sqlite3.OperationalError:

@@ -1,0 +1,12 @@
+The tradebook will need the following modifications:
+1. Change the name of the sheet to "TradeBook"
+2. Change the name of the tickers to internally approved tickers (can be NSE Tickers or not)
+3. Build a Ticker, NSE Code, BSE Code map
+The flow of execution is:
+1. Read Trades
+2. Write Trades
+3. Build Portfolio
+4. Write the Portfolio into DB
+5. Update Symbol Map (if necessary)
+6. Update Quotes (currently downloads everything from the beginning - need to modify it to update only selective dates)
+7. Build Equity Curve
