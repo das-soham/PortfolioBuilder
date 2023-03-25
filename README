@@ -9,4 +9,5 @@ The flow of execution is:
 4. Write the Portfolio into DB
 5. Update Symbol Map (if necessary)
 6. Update Quotes (currently downloads everything from the beginning - need to modify it to update only selective dates)
+    - need to update the stock split, bonus and demerger history
 7. Build Equity Curve

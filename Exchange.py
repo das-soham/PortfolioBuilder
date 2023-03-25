@@ -115,7 +115,7 @@ class BSE(Exchange):
             response_content = response.content.decode('utf-8')
             csv_data = csv.reader(response_content.splitlines(),delimiter=',')
             csv_data = list(csv_data)
-            for i in range(1, len(csv_data) - 1):
+            for i in range(1, len(csv_data)):   # why -1?
                 dailydata = csv_data[i]
                 prices_dict[dailydata[0]] = dailydata[4]
             return 0, prices_dict

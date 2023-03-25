@@ -98,7 +98,7 @@ def fetchNSEprices(TickerDet, ConnDet):
     if todate > (fromdate + timedelta(days=364)):
         modified_fromdate = fromdate
         while modified_fromdate < todate:
-            modified_todate = modified_fromdate + timedelta(days=365)
+            modified_todate = modified_fromdate + timedelta(days=364)
             status, prices = exch.fetchbulkprices(exch_code, modified_fromdate.strftime("%d-%m-%Y"),
                                                   modified_todate.strftime("%d-%m-%Y"))
             if status == -1:
