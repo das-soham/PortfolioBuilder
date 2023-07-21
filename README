@@ -8,6 +8,34 @@ The flow of execution is:
 3. Build Portfolio
 4. Write the Portfolio into DB
 5. Update Symbol Map (if necessary)
-6. Update Quotes (currently downloads everything from the beginning - need to modify it to update only selective dates)
-    - need to update the stock split, bonus and demerger history
+6. Update Quotes
 7. Build Equity Curve
+
+To Do List
+1. Read Fresh Trades [DONE]
+2. Update the Portfolio post the last date [DONE]
+3. Update Symbol Map with fresh symbols
+    a. Need to check for the fresh symbols only
+4. Update Quotes [DONE]
+    0. Fix NSE Price Fetch code [DONE]
+    2. Build subroutine for taking care of stock split, bonus and demerger history
+
+5. Build Equity Curve
+    0. Adjustments
+        1. Cash Deposits
+        2. Cash Withdrawals
+        3. NAV Calculation
+        4. Units
+    1 Analytics:
+        1. IRR
+        2. Max DD
+        3. Sharpe Ratio
+        4. Sortino Ratio
+        5. VaR
+6. Interface
+    6.a: GUI
+    6.b: Web Interface
+7. Delivery
+    7.a: Installer
+    7.b: Porting it to AWS/Lambda
+
