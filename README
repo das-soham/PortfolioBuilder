@@ -18,15 +18,19 @@ To Do List
     a. Need to check for the fresh symbols only
 4. Update Quotes [DONE]
     0. Fix NSE Price Fetch code [DONE]
-    2. Build subroutine for taking care of stock split, bonus and demerger history
+    1. Build subroutine for taking care of stock split, bonus and demerger history [TO BE DONE]
 
+4.5 Create supplemental logic for Cash (earning 0%) and Money Fund (earning some %)
 5. Build Equity Curve
     0. Adjustments
+
         1. Cash Deposits
         2. Cash Withdrawals
         3. NAV Calculation
         4. Units
-    1 Analytics:
+        5. Daily Returns Calculation
+
+    1 Analytics(Point to Point Calculation):
         1. IRR
         2. Max DD
         3. Sharpe Ratio
@@ -39,3 +43,7 @@ To Do List
     7.a: Installer
     7.b: Porting it to AWS/Lambda
 
+V2.0
+Risk Analytics Engine
+1. Sensitivity to IR, INFLATION, COMMODITY, FX
+    a. Sector returns correlations?

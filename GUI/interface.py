@@ -1,4 +1,4 @@
-from MainWindow import Ui_MainWindow
+from GUI.MainWindow import Ui_MainWindow
 from PySide6.QtWidgets import QApplication, QMainWindow
 import random
 
