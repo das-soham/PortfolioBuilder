@@ -4,8 +4,9 @@
     <list default="true" id="750b2adc-c1f3-42c3-a9f0-573b5e1cd130" name="Default" comment="Edited .gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EquityCurve.py" beforeDir="false" afterPath="$PROJECT_DIR$/EquityCurve.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +138,7 @@
       <recent name="K:\PortfolioBuilder\Archive" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main_driver">
+  <component name="RunManager" selected="Python.main">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -157,7 +158,7 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <configuration name="MainWindow" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="EquityCurve" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PortfolioBuilder" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -169,7 +170,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="K:\PortfolioBuilder\GUI\MainWindow.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EquityCurve.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -220,7 +221,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="interface_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PortfolioBuilder" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -232,7 +233,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interface_2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -265,17 +266,17 @@
     <list>
       <item itemvalue="Python.main_driver" />
       <item itemvalue="Python.interface" />
-      <item itemvalue="Python.MainWindow" />
-      <item itemvalue="Python.interface_2" />
       <item itemvalue="Python.TradeBook" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.EquityCurve" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.EquityCurve" />
         <item itemvalue="Python.main_driver" />
         <item itemvalue="Python.TradeBook" />
         <item itemvalue="Python.interface" />
-        <item itemvalue="Python.interface_2" />
-        <item itemvalue="Python.MainWindow" />
       </list>
     </recent_temporary>
   </component>
@@ -312,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679743730828</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Edited .gitignore">
+      <created>1690034477595</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690034477595</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -389,9 +397,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Portfolio.py</url>
-          <line>52</line>
-          <option name="timeStamp" value="28" />
+          <url>file://$PROJECT_DIR$/EquityCurve.py</url>
+          <line>82</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
